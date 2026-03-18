@@ -6,5 +6,4 @@ services:
     image: ${IMAGE_NAME}:${IMAGE_TAG:-latest}   # Puller fra ghcr.io
 
   db:
-    ports:
-      - "${DB_EXTERNAL_PORT:-3307}:3306"
+     ports: []   # Database er IKKE eksponeret eksternt – kun API er tilgængeligt
